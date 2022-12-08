@@ -1,8 +1,8 @@
 ﻿type Article = {
-  author: string
-  category: string
-  country: string
-  description: string
+  author: string | null;
+  category: string;
+  country: string;
+  description: string;
   image: string | null;
   language: string;
   published_at: string;
@@ -19,8 +19,8 @@ type Pagination = {
 };
 
 type NewsResponse = {
-  data: Article[];
   pagination: Pagination;
+  data: Article[];
 };
  
 type Category = 

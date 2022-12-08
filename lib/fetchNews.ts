@@ -59,12 +59,6 @@ const fetchNews = async (
     }),
   });
 
-  console.log(
-    "Loading new data from API >>> ",
-    category,
-    keywords
-  );
-
   const NewsResponse = await res.json();
 
   const news = sortNewsByImage(NewsResponse.data.myQuery);
@@ -73,3 +67,6 @@ const fetchNews = async (
 };
 
 export default fetchNews;
+
+// Access API
+// stepzen import curl "http://api.mediastack.com/v1/news?access_key=abc"
